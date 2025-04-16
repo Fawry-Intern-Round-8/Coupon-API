@@ -11,8 +11,7 @@
 	<groupId>com.fawry</groupId>
 	<artifactId>coupon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Coupon-API</name>
-	<description>Coupon-API</description>
+	<name>coupon-service</name>
 	<url/>
 	<licenses>
 		<license/>
