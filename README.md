@@ -1,6 +1,7 @@
 # Coupon-API
 
 ## ERD Diagram
+
 ```mermaid
 erDiagram
     COUPON {
@@ -25,5 +26,5 @@ erDiagram
         timestamp consumed_at
     }
 
-    COUPON ||--o{ COUPON_CONSUMPTION : "has"
+    COUPON ||--o{ COUPON_CONSUMPTION: "has"
 ```

@@ -47,7 +47,7 @@ public class CouponService {
         return couponRepo.findById(id).orElseThrow(() -> new CouponNotFoundException("Not found a coupon with this id"));
     }
 
-    public Coupon getCouponByCode(String code) throws CouponNotFoundException{
+    public Coupon getCouponByCode(String code) throws CouponNotFoundException {
         return couponRepo.findByCode(code).orElseThrow(() -> new CouponNotFoundException("Not found a coupon with this code"));
     }
 

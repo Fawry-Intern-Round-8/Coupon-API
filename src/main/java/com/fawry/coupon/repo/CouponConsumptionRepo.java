@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface CouponConsumptionRepo extends JpaRepository<CouponConsumption, Long> {
     List<CouponConsumption> findByCouponId(Long couponId);
+
     List<CouponConsumption> findByOrderId(String orderId);
 }
