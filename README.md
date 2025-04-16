@@ -1,5 +1,6 @@
 # Coupon-API
 
+## ERD Diagram
 ```mermaid
 erDiagram
     COUPON {
