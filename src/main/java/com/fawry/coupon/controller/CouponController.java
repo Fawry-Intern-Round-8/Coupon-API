@@ -1,7 +1,9 @@
 package com.fawry.coupon.controller;
 
 import com.fawry.coupon.dto.ApiResponse;
+import com.fawry.coupon.dto.CouponConsumptionResponse;
 import com.fawry.coupon.dto.CouponRequestDTO;
+import com.fawry.coupon.dto.CouponValidationResponse;
 import com.fawry.coupon.entity.Coupon;
 import com.fawry.coupon.exception.CouponAlreadyExist;
 import com.fawry.coupon.exception.CouponNotFoundException;
@@ -65,11 +67,11 @@ public class CouponController {
     }
 
     @GetMapping("/validate")
-    public ResponseEntity<ApiResponse> validateCoupon(@RequestParam String code) {
+    public ResponseEntity<CouponValidationResponse> validateCoupon(@RequestParam String code) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(new ApiResponse(couponService.validateCoupon(code)));
+            return ResponseEntity.ok((couponService.validateCoupon(code)));
         } catch (CouponNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+            throw new CouponNotFoundException(e.getMessage());
         }
     }
 
